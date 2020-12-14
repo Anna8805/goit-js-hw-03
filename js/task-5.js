@@ -14,20 +14,15 @@ console.table(products);
 const getAllPropValues = function (arr, prop) {
     const allPropValues = [];
 
-    for (const product of products) {
-        allPropValues.push(product.name);
-    }
+    for (const product of arr) {
+        let allPropValue = product[prop];
+        
+        if (allPropValue !== undefined) {
+            allPropValues.push(allPropValue);
+        }
+    } 
 
-    // for (const product of products) {
-    //     allPropValues.push(product.quantity);
-    // }
-
-    //  for (const product of products) {
-    //     allPropValues.push(product.category);
-    // }
-    
     return allPropValues;
-    
 };
 
 /*
